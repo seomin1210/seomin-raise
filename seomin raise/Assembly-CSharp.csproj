@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MonoSingleton.cs" />
+    <Compile Include="Assets\Scripts\UiManager.cs" />
+    <Compile Include="Assets\Scripts\UpgradePanel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
