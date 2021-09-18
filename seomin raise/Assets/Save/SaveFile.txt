@@ -1,0 +1,26 @@
+﻿{
+    "money": 6,
+    "statsList": [
+        {
+            "statsNumber": 0,
+            "statsName": "근력",
+            "amount": 0,
+            "price": 100,
+            "mPs": 0
+        },
+        {
+            "statsNumber": 0,
+            "statsName": "민첩",
+            "amount": 0,
+            "price": 100,
+            "mPs": 0
+        },
+        {
+            "statsNumber": 0,
+            "statsName": "지능",
+            "amount": 0,
+            "price": 100,
+            "mPs": 0
+        }
+    ]
+}
