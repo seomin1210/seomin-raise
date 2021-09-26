@@ -1,26 +1,55 @@
 ﻿{
-    "money": 6,
+    "money": 157,
+    "userJob": 0,
+    "userJobc": 0,
+    "userJobs": 0,
+    "userStr": 3,
+    "userDex": 2,
+    "userInt": 0,
     "statsList": [
         {
             "statsNumber": 0,
             "statsName": "근력",
-            "amount": 0,
-            "price": 100,
-            "mPs": 0
+            "amount": 3,
+            "price": 133
         },
         {
-            "statsNumber": 0,
+            "statsNumber": 1,
             "statsName": "민첩",
-            "amount": 0,
-            "price": 100,
-            "mPs": 0
+            "amount": 2,
+            "price": 121
         },
         {
-            "statsNumber": 0,
+            "statsNumber": 2,
             "statsName": "지능",
             "amount": 0,
-            "price": 100,
-            "mPs": 0
+            "price": 100
+        }
+    ],
+    "jobList": [
+        {
+            "jobNumber": 0,
+            "jobName": "식당 서빙",
+            "price": 1000,
+            "mPs": 600,
+            "mPc": 6000,
+            "needInt": 100
+        },
+        {
+            "jobNumber": 1,
+            "jobName": "제빵사",
+            "price": 1000,
+            "mPs": 750,
+            "mPc": 7500,
+            "needInt": 100
+        },
+        {
+            "jobNumber": 2,
+            "jobName": "주방보조설거지",
+            "price": 1000,
+            "mPs": 900,
+            "mPc": 9000,
+            "needInt": 100
         }
     ]
 }

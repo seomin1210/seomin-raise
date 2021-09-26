@@ -40,8 +40,6 @@ public class GameManager : MonoSingleton<GameManager>
         }
     }
 
-    private int job;
-    public int Job { get { return job; } }
 
     private string SAVE_PATH = "";
     private string SAVE_FILENAME = "/SaveFile.txt";
@@ -57,7 +55,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         LoadFromJson();
         InvokeRepeating("SaveToJson", 1f, 60f);
-        InvokeRepeating("EarnEnergyPerSecond", 0f, 1f);
+        InvokeRepeating("EarnMoneyPerSecond", 0f, 1f);
     }
     private void LoadFromJson()
     {
@@ -75,5 +73,10 @@ public class GameManager : MonoSingleton<GameManager>
     private void OnApplicationQuit()
     {
         SaveToJson();
+    }
+    private void EarnMoneyPerSecond()
+    {
+        user.money += (int)(user.userDex*1.5) + user.userJobs;
+        UI.UpdateMoneyPanel();
     }
 }

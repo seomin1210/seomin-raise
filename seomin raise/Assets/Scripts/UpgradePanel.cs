@@ -14,8 +14,6 @@ public class UpgradePanel : MonoBehaviour
     [SerializeField]
     private Text priceText = null;
     [SerializeField]
-    private Button purchaseButton = null;
-    [SerializeField]
     private Sprite[] statsSprite = null;
 
     private Stats stats = null;
@@ -31,7 +29,7 @@ public class UpgradePanel : MonoBehaviour
         statsImage.sprite = statsSprite[stats.statsNumber];
         statsNameText.text = stats.statsName;
         amountText.text = string.Format("{0}", stats.amount);
-        priceText.text = string.Format("{0} 애너지", stats.price);
+        priceText.text = string.Format("{0} 원", stats.price);
     }
     public void OnClickPurchase()
     {
@@ -41,7 +39,21 @@ public class UpgradePanel : MonoBehaviour
         }
         GameManager.Instance.CurrentUser.money -= stats.price;
         stats.amount++;
-        stats.price = (long)(stats.price * 1.25f);
+        stats.price = (long)(stats.price * 1.1f);
+        switch (stats.statsNumber)
+        {
+            case 0:
+                GameManager.Instance.CurrentUser.userStr = stats.amount;
+                break;
+            case 1:
+                GameManager.Instance.CurrentUser.userDex = stats.amount;
+                break;
+            case 2:
+                GameManager.Instance.CurrentUser.userInt = stats.amount;
+                break;
+            default:
+                break;
+        }
         UpdateValues();
         GameManager.Instance.UI.UpdateMoneyPanel();
     }

@@ -6,5 +6,4 @@ public class Stats
     public string statsName;
     public int amount;
     public long price;
-    public long mPs;
 }
