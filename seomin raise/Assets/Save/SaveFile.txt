@@ -1,5 +1,5 @@
 ﻿{
-    "money": 157,
+    "money": 184,
     "userJob": 0,
     "userJobc": 0,
     "userJobs": 0,

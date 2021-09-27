@@ -2100,8 +2100,8 @@ MonoBehaviour:
   priceText: {fileID: 1986249130}
   statsSprite:
   - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
-  - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
-  - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
+  - {fileID: -3637557228772214577, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
+  - {fileID: -8819204307325172043, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
 --- !u!1 &1428743077
 GameObject:
   m_ObjectHideFlags: 0
