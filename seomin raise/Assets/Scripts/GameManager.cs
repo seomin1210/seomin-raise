@@ -39,10 +39,24 @@ public class GameManager : MonoSingleton<GameManager>
             return canvas;
         }
     }
-
+    private ButtonManager buttonm = null;
+    public ButtonManager Buttonm
+    {
+        get
+        {
+            if (buttonm == null)
+            {
+                buttonm = FindObjectOfType<ButtonManager>();
+            }
+            return buttonm;
+        }
+    }
 
     private string SAVE_PATH = "";
     private string SAVE_FILENAME = "/SaveFile.txt";
+    private bool bPaused = false;
+    private bool bEsc = false;
+    public bool bOther = false;
     private void Awake()
     {
         SAVE_PATH = Application.dataPath + "/Save";
@@ -56,6 +70,25 @@ public class GameManager : MonoSingleton<GameManager>
         LoadFromJson();
         InvokeRepeating("SaveToJson", 1f, 60f);
         InvokeRepeating("EarnMoneyPerSecond", 0f, 1f);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown("escape"))
+        {
+            if (bOther)
+            {
+                Buttonm.OnClickCloseWorkList();
+                return;
+            }
+            if (bEsc)
+            {
+                Buttonm.OnClickCloseSettingPanel();
+                bEsc = false;
+                return;
+            }
+            Buttonm.OpenSettingPanel();
+            bEsc = true;
+        }
     }
     private void LoadFromJson()
     {
@@ -73,6 +106,22 @@ public class GameManager : MonoSingleton<GameManager>
     private void OnApplicationQuit()
     {
         SaveToJson();
+    }
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        {
+            bPaused = true;
+            SaveToJson();
+        }
+        else
+        {
+            if (bPaused)
+            {
+                bPaused = false;
+                LoadFromJson();
+            }
+        }
     }
     private void EarnMoneyPerSecond()
     {

@@ -1,17 +1,17 @@
 ﻿{
-    "money": 184,
+    "money": 142,
     "userJob": 0,
     "userJobc": 0,
     "userJobs": 0,
-    "userStr": 3,
+    "userStr": 2,
     "userDex": 2,
     "userInt": 0,
     "statsList": [
         {
             "statsNumber": 0,
             "statsName": "근력",
-            "amount": 3,
-            "price": 133
+            "amount": 2,
+            "price": 121
         },
         {
             "statsNumber": 1,
@@ -30,26 +30,26 @@
         {
             "jobNumber": 0,
             "jobName": "식당 서빙",
-            "price": 1000,
+            "price": 60000,
             "mPs": 600,
             "mPc": 6000,
-            "needInt": 100
+            "needInt": 60
         },
         {
             "jobNumber": 1,
             "jobName": "제빵사",
-            "price": 1000,
+            "price": 75000,
             "mPs": 750,
             "mPc": 7500,
-            "needInt": 100
+            "needInt": 75
         },
         {
             "jobNumber": 2,
             "jobName": "주방보조설거지",
-            "price": 1000,
+            "price": 90000,
             "mPs": 900,
             "mPc": 9000,
-            "needInt": 100
+            "needInt": 90
         }
     ]
 }

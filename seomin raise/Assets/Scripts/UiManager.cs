@@ -8,7 +8,7 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private Text moneyText;
     [SerializeField]
-    private GameObject error = null;
+    private GameObject errorPanel = null;
     [SerializeField]
     private Text errorText = null;
     [SerializeField]
@@ -52,7 +52,7 @@ public class UiManager : MonoBehaviour
     }
     public void OnClickImage()
     {
-        GameManager.Instance.CurrentUser.money += 1 + GameManager.Instance.CurrentUser.userStr*2 + GameManager.Instance.CurrentUser.userJobc;
+        GameManager.Instance.CurrentUser.money += 2 + GameManager.Instance.CurrentUser.userStr*2 + GameManager.Instance.CurrentUser.userJobc;
         UpdateMoneyPanel();
     }
     public void UpdateMoneyPanel()
@@ -62,18 +62,18 @@ public class UiManager : MonoBehaviour
     public void ErrorLackMoney()
     {
         errorText.text = string.Format("돈이 부족합니다.");
-        error.SetActive(true);
+        errorPanel.SetActive(true);
         Invoke("SetActiveFalse", 1);
     }
     public void SetActiveFalse()
     {
-        error.SetActive(false);
+        errorPanel.SetActive(false);
     }
 
     public void ErrorLackInt()
     {
         errorText.text = string.Format("지능이 부족합니다.");
-        error.SetActive(true);
+        errorPanel.SetActive(true);
         Invoke("SetActiveFalse", 1);
     }
 }

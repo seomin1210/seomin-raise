@@ -6,19 +6,29 @@ using UnityEngine.UI;
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject WorkScroll = null;
+    private GameObject work = null;
     [SerializeField]
-    private GameObject BackWorkCloseButton = null;
+    private GameObject setting = null;
     public void OnClickOpenWorkList()
     {
-        BackWorkCloseButton.SetActive(true);
-        WorkScroll.SetActive(true);
+        GameManager.Instance.bOther = true;
+        work.SetActive(true);
     }
     public void OnClickCloseWorkList()
     {
-        BackWorkCloseButton.SetActive(false);
-        WorkScroll.SetActive(false);
+        GameManager.Instance.bOther = false;
+        work.SetActive(false);
     }
-
-    
+    public void OpenSettingPanel()
+    {
+        setting.SetActive(true);
+    }
+    public void OnClickCloseSettingPanel()
+    {
+        setting.SetActive(false);
+    }
+    public void OnClickEscapeButton()
+    {
+        Application.Quit();
+    }
 }
