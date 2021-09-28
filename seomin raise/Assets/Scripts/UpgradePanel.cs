@@ -35,6 +35,7 @@ public class UpgradePanel : MonoBehaviour
     {
         if (GameManager.Instance.CurrentUser.money < stats.price)
         {
+            GameManager.Instance.UI.ErrorLackMoney();
             return;
         }
         GameManager.Instance.CurrentUser.money -= stats.price;

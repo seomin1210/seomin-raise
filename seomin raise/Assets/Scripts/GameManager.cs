@@ -89,6 +89,11 @@ public class GameManager : MonoSingleton<GameManager>
             Buttonm.OpenSettingPanel();
             bEsc = true;
         }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            EarnMoneyPerSecond();
+            UI.OnClickImage();
+        }
     }
     private void LoadFromJson()
     {

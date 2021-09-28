@@ -1658,6 +1658,15 @@ MonoBehaviour:
   priceText: {fileID: 355374177}
   jobNeedInt: {fileID: 801881723}
   jobSprite:
+  - {fileID: 21300000, guid: bed85eb95c2fb2c47ba829ab4791e163, type: 3}
+  - {fileID: -2268882470940828041, guid: 8336e182d2d5c4b4b903c457b88a1864, type: 3}
+  - {fileID: 21300000, guid: 62f39e0a694eb894ea9df6f21553d4a3, type: 3}
+  - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
+  - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
+  - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
+  - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
+  - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
+  - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
   - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
   - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
   - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
@@ -2081,6 +2090,60 @@ MonoBehaviour:
       mPs: 900
       mPc: 9000
       needInt: 90
+    - jobNumber: 3
+      jobName: "\uBC14\uB9AC\uC2A4\uD0C0"
+      price: 100000
+      mPs: 1000
+      mPc: 10000
+      needInt: 100
+    - jobNumber: 4
+      jobName: "\uD3B8\uC758\uC810 \uC54C\uBC14"
+      price: 120000
+      mPs: 1200
+      mPc: 12000
+      needInt: 120
+    - jobNumber: 5
+      jobName: "\uB514\uC790\uC774\uB108"
+      price: 125000
+      mPs: 1250
+      mPc: 12500
+      needInt: 125
+    - jobNumber: 6
+      jobName: "\uC0AC\uBB34 \uBCF4\uC870"
+      price: 140000
+      mPs: 1400
+      mPc: 14000
+      needInt: 140
+    - jobNumber: 7
+      jobName: "\uB9C9\uB178\uB3D9"
+      price: 150000
+      mPs: 1500
+      mPc: 15000
+      needInt: 150
+    - jobNumber: 8
+      jobName: "PC\uBC29 \uC54C\uBC14"
+      price: 160000
+      mPs: 1600
+      mPc: 16000
+      needInt: 160
+    - jobNumber: 9
+      jobName: "\uC601\uC0C1 \uD3B8\uC9D1\uC790"
+      price: 200000
+      mPs: 2000
+      mPc: 20000
+      needInt: 200
+    - jobNumber: 10
+      jobName: "\uD0DD\uBC30\uAE30\uC0AC"
+      price: 250000
+      mPs: 2500
+      mPc: 25000
+      needInt: 250
+    - jobNumber: 11
+      jobName: "\uBC30\uB2EC \uB77C\uC774\uB354"
+      price: 300000
+      mPs: 3000
+      mPc: 30000
+      needInt: 300
   bOther: 0
 --- !u!4 &1365681166
 Transform:
@@ -2346,9 +2409,9 @@ MonoBehaviour:
   amountText: {fileID: 768623564}
   priceText: {fileID: 1986249130}
   statsSprite:
-  - {fileID: -2337961310298916287, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
-  - {fileID: -3637557228772214577, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
-  - {fileID: -8819204307325172043, guid: 7161969f7de491f41a67d2cde9f4b5c1, type: 3}
+  - {fileID: 2185167392590505104, guid: 8336e182d2d5c4b4b903c457b88a1864, type: 3}
+  - {fileID: 4694007364678901417, guid: 8336e182d2d5c4b4b903c457b88a1864, type: 3}
+  - {fileID: -8573801853638594318, guid: 8336e182d2d5c4b4b903c457b88a1864, type: 3}
 --- !u!1 &1428743077
 GameObject:
   m_ObjectHideFlags: 0
