@@ -16,6 +16,8 @@ public class JobPanel : MonoBehaviour
     private Sprite[] jobSprite = null;
 
     private Job job = null;
+    private bool bMoney = false;
+    private bool bFor = false;
 
     public void SetValue(Job job)
     {
@@ -32,10 +34,40 @@ public class JobPanel : MonoBehaviour
     }
     public void OnClickJob()
     {
+        if (GameManager.Instance.CurrentUser.userJob == job.jobName)
+            GameManager.Instance.UI.ErrorSameJob();
+            return;
+        if (bFor)
+            return;
         if (GameManager.Instance.CurrentUser.money < job.price)
         {
-            GameManager.Instance.UI.ErrorLackMoney();
-            return;
+            if (GameManager.Instance.CurrentUser.money2 > 0)
+            {
+                long money2Leg = GameManager.Instance.CurrentUser.money2;
+                bFor = true;
+                for (int i = 0; i < money2Leg; i++)
+                {
+                    GameManager.Instance.CurrentUser.money2--;
+                    GameManager.Instance.CurrentUser.money += 10000;
+                    if (GameManager.Instance.CurrentUser.money > job.price)
+                    {
+                        bMoney = true;
+                        break;
+                    }
+                }
+                if (!bMoney)
+                {
+                    GameManager.Instance.UI.ErrorLackMoney();
+                    GameManager.Instance.UI.UpdateMoneyPanel();
+                    bFor = false;
+                    return;
+                }
+            }
+            else
+            {
+                GameManager.Instance.UI.ErrorLackMoney();
+                return;
+            }
         }
         if (GameManager.Instance.CurrentUser.userInt < job.needInt)
         {
@@ -43,8 +75,11 @@ public class JobPanel : MonoBehaviour
             return;
         }
         GameManager.Instance.CurrentUser.money -= job.price;
+        GameManager.Instance.CurrentUser.userJob = job.jobName;
         GameManager.Instance.CurrentUser.userJobc = job.mPc;
         GameManager.Instance.CurrentUser.userJobs = job.mPs;
         GameManager.Instance.UI.UpdateMoneyPanel();
+        bMoney = false;
+        bFor = false;
     }
 }

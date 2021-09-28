@@ -17,6 +17,8 @@ public class UpgradePanel : MonoBehaviour
     private Sprite[] statsSprite = null;
 
     private Stats stats = null;
+    private bool bMoney = false;
+    private bool bFor = false;
 
     public void SetValue(Stats stats)
     {
@@ -33,10 +35,37 @@ public class UpgradePanel : MonoBehaviour
     }
     public void OnClickPurchase()
     {
+        if (bFor)
+            return;
         if (GameManager.Instance.CurrentUser.money < stats.price)
         {
-            GameManager.Instance.UI.ErrorLackMoney();
-            return;
+            if(GameManager.Instance.CurrentUser.money2 > 0)
+            {
+                long money2Leg = GameManager.Instance.CurrentUser.money2;
+                bFor = true;
+                for (int i = 0; i < money2Leg; i++)
+                {
+                    GameManager.Instance.CurrentUser.money2--;
+                    GameManager.Instance.CurrentUser.money += 10000;
+                    if (GameManager.Instance.CurrentUser.money > stats.price)
+                    {
+                        bMoney = true;
+                        break;
+                    }
+                }
+                if (!bMoney)
+                {
+                    GameManager.Instance.UI.ErrorLackMoney();
+                    GameManager.Instance.UI.UpdateMoneyPanel();
+                    bFor = false;
+                    return;
+                }
+            }
+            else
+            {
+                GameManager.Instance.UI.ErrorLackMoney();
+                return;
+            }
         }
         GameManager.Instance.CurrentUser.money -= stats.price;
         stats.amount++;
@@ -57,5 +86,7 @@ public class UpgradePanel : MonoBehaviour
         }
         UpdateValues();
         GameManager.Instance.UI.UpdateMoneyPanel();
+        bFor = false;
+        bMoney = false;
     }
 }

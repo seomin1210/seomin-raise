@@ -1,17 +1,19 @@
 ﻿{
-    "money": 14,
-    "userJob": 0,
-    "userJobc": 0,
-    "userJobs": 0,
-    "userStr": 0,
+    "money": 8077,
+    "money2": 3736,
+    "diamond": 265,
+    "userJob": "식당 서빙",
+    "userJobc": 6000,
+    "userJobs": 600,
+    "userStr": 68,
     "userDex": 0,
-    "userInt": 0,
+    "userInt": 60,
     "statsList": [
         {
             "statsNumber": 0,
             "statsName": "근력",
-            "amount": 0,
-            "price": 100
+            "amount": 68,
+            "price": 63175
         },
         {
             "statsNumber": 1,
@@ -22,8 +24,8 @@
         {
             "statsNumber": 2,
             "statsName": "지능",
-            "amount": 0,
-            "price": 100
+            "amount": 60,
+            "price": 29473
         }
     ],
     "jobList": [
@@ -122,6 +124,18 @@
             "mPs": 3000,
             "mPc": 30000,
             "needInt": 300
+        }
+    ],
+    "shopList": [
+        {
+            "itemNumber": 0,
+            "itemName": "클릭 2배",
+            "price": 100
+        },
+        {
+            "itemNumber": 1,
+            "itemName": "초당 2배",
+            "price": 100
         }
     ]
 }

@@ -55,8 +55,12 @@ public class GameManager : MonoSingleton<GameManager>
     private string SAVE_PATH = "";
     private string SAVE_FILENAME = "/SaveFile.txt";
     private bool bPaused = false;
-    private bool bEsc = false;
+    public bool bEsc = false;
     public bool bOther = false;
+    public bool itemClickDouble = false;
+    public bool itemSecondDouble = false;
+    private int secondCnt;
+    private int secondClickCnt;
     private void Awake()
     {
         SAVE_PATH = Application.dataPath + "/Save";
@@ -78,6 +82,8 @@ public class GameManager : MonoSingleton<GameManager>
             if (bOther)
             {
                 Buttonm.OnClickCloseWorkList();
+                Buttonm.OnClickCloseShopList();
+                Buttonm.OnClickCloseHelpPanel();
                 return;
             }
             if (bEsc)
@@ -130,7 +136,19 @@ public class GameManager : MonoSingleton<GameManager>
     }
     private void EarnMoneyPerSecond()
     {
-        user.money += (int)(user.userDex*1.5) + user.userJobs;
+        if (itemSecondDouble)
+        {
+            user.money += ((int)(user.userDex * 1.5) + user.userJobs) * 2;
+            secondCnt++;
+        }
+        else
+            user.money += (int)(user.userDex * 1.5) + user.userJobs;
+        if (itemClickDouble)
+            secondClickCnt++;
+        if (secondCnt >= 60)
+            itemSecondDouble = false;
+        if (secondClickCnt >= 60)
+            itemClickDouble = false;
         UI.UpdateMoneyPanel();
     }
 }

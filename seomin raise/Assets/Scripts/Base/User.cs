@@ -5,7 +5,9 @@ using System.Collections.Generic;
 public class User
 {
     public long money;
-    public int userJob;
+    public long money2;
+    public long diamond;
+    public string userJob;
     public long userJobc;
     public long userJobs;
     public long userStr;
@@ -13,4 +15,5 @@ public class User
     public long userInt;
     public List<Stats> statsList = new List<Stats>();
     public List<Job> jobList = new List<Job>();
+    public List<Shop> shopList = new List<Shop>();
 }
