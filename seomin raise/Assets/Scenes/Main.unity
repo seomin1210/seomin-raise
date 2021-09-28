@@ -3605,6 +3605,8 @@ MonoBehaviour:
   user:
     money: 0
     money2: 0
+    plusMoney: 2
+    mPs: 1.5
     diamond: 0
     userJob: 
     userJobc: 0

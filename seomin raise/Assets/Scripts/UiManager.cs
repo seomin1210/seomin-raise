@@ -74,10 +74,17 @@ public class UiManager : MonoBehaviour
         int randomDiamond = Random.Range(0, 101);
         if(randomDiamond == 0)
             GameManager.Instance.CurrentUser.diamond++;
+        if(GameManager.Instance.CurrentUser.plusMoney == 2)
+        {
+            if (GameManager.Instance.CurrentUser.userStr >= 100)
+                GameManager.Instance.CurrentUser.plusMoney = 10;
+            else
+                GameManager.Instance.CurrentUser.plusMoney = 2;
+        }
         if(GameManager.Instance.itemClickDouble == true)
-            GameManager.Instance.CurrentUser.money += (2 + GameManager.Instance.CurrentUser.userStr * 2 + GameManager.Instance.CurrentUser.userJobc)*2;
+            GameManager.Instance.CurrentUser.money += (2 + GameManager.Instance.CurrentUser.userStr * GameManager.Instance.CurrentUser.plusMoney + GameManager.Instance.CurrentUser.userJobc)*2;
         else
-            GameManager.Instance.CurrentUser.money += 2 + GameManager.Instance.CurrentUser.userStr*2 + GameManager.Instance.CurrentUser.userJobc;
+            GameManager.Instance.CurrentUser.money += 2 + GameManager.Instance.CurrentUser.userStr * GameManager.Instance.CurrentUser.plusMoney + GameManager.Instance.CurrentUser.userJobc;
         UpdateMoneyPanel();
     }
     public void UpdateMoneyPanel()

@@ -56,17 +56,14 @@
     <Compile Include="Assets\Scripts\UiManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Base\Job.cs" />
+    <Compile Include="Assets\Scripts\ShopPanel.cs" />
     <Compile Include="Assets\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\UpgradePanel.cs" />
     <Compile Include="Assets\Scripts\Base\User.cs" />
     <Compile Include="Assets\Scripts\JobPanel.cs" />
+    <Compile Include="Assets\Scripts\Base\Shop.cs" />
     <Compile Include="Assets\Scripts\MonoSingleton.cs" />
     <Compile Include="Assets\Scripts\Base\Stats.cs" />
-    <Compile Include="Assets\Scripts\ShopPanel.cs" />
-    <Compile Include="Assets\Scripts\Base\Shop.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Save\SaveFile.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

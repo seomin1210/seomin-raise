@@ -63,7 +63,8 @@ public class GameManager : MonoSingleton<GameManager>
     private int secondClickCnt;
     private void Awake()
     {
-        SAVE_PATH = Application.dataPath + "/Save";
+        SAVE_PATH = Application.persistentDataPath + "/Save";
+        //SAVE_PATH = Application.dataPath + "/Save";
         if (!Directory.Exists(SAVE_PATH))
         {
             Directory.CreateDirectory(SAVE_PATH);
@@ -77,7 +78,7 @@ public class GameManager : MonoSingleton<GameManager>
     }
     private void Update()
     {
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKey(KeyCode.Escape))
         {
             if (bOther)
             {
@@ -136,13 +137,20 @@ public class GameManager : MonoSingleton<GameManager>
     }
     private void EarnMoneyPerSecond()
     {
+        if (user.mPs == 1.5f)
+        {
+            if (GameManager.Instance.CurrentUser.userDex >= 100)
+                user.mPs = 4f;
+            else
+                user.mPs = 1.5f;
+        }
         if (itemSecondDouble)
         {
-            user.money += ((int)(user.userDex * 1.5) + user.userJobs) * 2;
+            user.money += ((int)(user.userDex * user.mPs) + user.userJobs) * 2;
             secondCnt++;
         }
         else
-            user.money += (int)(user.userDex * 1.5) + user.userJobs;
+            user.money += (int)(user.userDex * user.mPs) + user.userJobs;
         if (itemClickDouble)
             secondClickCnt++;
         if (secondCnt >= 60)

@@ -6,6 +6,8 @@ public class User
 {
     public long money;
     public long money2;
+    public long plusMoney = 2;
+    public float mPs = 1.5f;
     public long diamond;
     public string userJob;
     public long userJobc;

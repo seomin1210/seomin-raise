@@ -58,12 +58,15 @@ public class UpgradePanel : MonoBehaviour
                     GameManager.Instance.UI.ErrorLackMoney();
                     GameManager.Instance.UI.UpdateMoneyPanel();
                     bFor = false;
+                    bMoney = false;
                     return;
                 }
             }
             else
             {
                 GameManager.Instance.UI.ErrorLackMoney();
+                bFor = false;
+                bMoney = false;
                 return;
             }
         }

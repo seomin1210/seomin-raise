@@ -35,8 +35,10 @@ public class JobPanel : MonoBehaviour
     public void OnClickJob()
     {
         if (GameManager.Instance.CurrentUser.userJob == job.jobName)
+        {
             GameManager.Instance.UI.ErrorSameJob();
             return;
+        }
         if (bFor)
             return;
         if (GameManager.Instance.CurrentUser.money < job.price)
@@ -66,12 +68,15 @@ public class JobPanel : MonoBehaviour
             else
             {
                 GameManager.Instance.UI.ErrorLackMoney();
+                bFor = false;
                 return;
             }
         }
         if (GameManager.Instance.CurrentUser.userInt < job.needInt)
         {
             GameManager.Instance.UI.ErrorLackInt();
+            bFor = false;
+            bMoney = false;
             return;
         }
         GameManager.Instance.CurrentUser.money -= job.price;
