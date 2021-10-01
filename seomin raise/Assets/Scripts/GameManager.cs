@@ -63,8 +63,8 @@ public class GameManager : MonoSingleton<GameManager>
     private int secondClickCnt;
     private void Awake()
     {
-        //SAVE_PATH = Application.persistentDataPath + "/Save";
-        SAVE_PATH = Application.dataPath + "/Save";
+        //SAVE_PATH = Application.persistentDataPath + "/Save"; // 모바일
+        SAVE_PATH = Application.dataPath + "/Save"; // 유니티
         if (!Directory.Exists(SAVE_PATH))
         {
             Directory.CreateDirectory(SAVE_PATH);

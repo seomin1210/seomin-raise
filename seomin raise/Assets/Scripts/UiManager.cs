@@ -14,6 +14,8 @@ public class UiManager : MonoBehaviour
     [SerializeField]
     private Text errorText = null;
     [SerializeField]
+    private Animator seominAnimator = null;
+    [SerializeField]
     private GameObject upgradePanelTemplate = null;
     [SerializeField]
     private GameObject jobPanelTemplate = null;
@@ -72,7 +74,8 @@ public class UiManager : MonoBehaviour
     public void OnClickImage()
     {
         int randomDiamond = Random.Range(0, 101);
-        if(randomDiamond == 0)
+        seominAnimator.Play("seomin");
+        if (randomDiamond == 0)
             GameManager.Instance.CurrentUser.diamond++;
         if(GameManager.Instance.CurrentUser.plusMoney == 2)
         {

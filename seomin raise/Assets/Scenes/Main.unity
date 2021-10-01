@@ -3741,6 +3741,7 @@ MonoBehaviour:
   diamondText: {fileID: 171641915}
   errorPanel: {fileID: 1242474922}
   errorText: {fileID: 369221899}
+  seominAnimator: {fileID: 2107983405}
   upgradePanelTemplate: {fileID: 1426928792}
   jobPanelTemplate: {fileID: 829109847}
   shopPanelTemplate: {fileID: 405039709}
@@ -6591,6 +6592,7 @@ GameObject:
   - component: {fileID: 2107983402}
   - component: {fileID: 2107983404}
   - component: {fileID: 2107983403}
+  - component: {fileID: 2107983405}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -6614,8 +6616,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 350}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 0, y: 250}
+  m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2107983403
 MonoBehaviour:
@@ -6637,7 +6639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -8930964735092358717, guid: e1e39a0f8c03cbf47bce1b83e4a1b0d3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6655,6 +6657,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107983401}
   m_CullTransparentMesh: 1
+--- !u!95 &2107983405
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107983401}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cca3a55c8e3ebc459f324916c3b5a5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2114180082
 GameObject:
   m_ObjectHideFlags: 0
