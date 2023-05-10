@@ -12,8 +12,6 @@ ScriptsOnlyBuild:
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     - UnityEditor.U2D.IK.IKGizmos
-    Unity.2D.IK.Runtime.dll:
-    - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.PixelPerfect.dll:
     - UnityEngine.U2D.PixelPerfectCamera
     Unity.2D.Tilemap.Editor.dll:
@@ -26,13 +24,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -75,43 +66,43 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1510}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1570}
+      Script: {instanceID: 1578}
     - Class: 114
-      Script: {instanceID: 1678}
+      Script: {instanceID: 1696}
     - Class: 114
-      Script: {instanceID: 2204}
+      Script: {instanceID: 2254}
     - Class: 114
-      Script: {instanceID: 2470}
+      Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2478}
+      Script: {instanceID: 2538}
     - Class: 114
-      Script: {instanceID: 2622}
+      Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 2666}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 3002}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3246}
+      Script: {instanceID: 3344}
     - Class: 114
-      Script: {instanceID: 3280}
+      Script: {instanceID: 3384}
     - Class: 114
-      Script: {instanceID: 3362}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 3584}
+      Script: {instanceID: 3698}
     - Class: 114
-      Script: {instanceID: 3662}
+      Script: {instanceID: 3784}
     - Class: 114
-      Script: {instanceID: 3746}
+      Script: {instanceID: 3872}
     - Class: 114
-      Script: {instanceID: 4364}
+      Script: {instanceID: 4526}
     - Class: 114
-      Script: {instanceID: 4560}
+      Script: {instanceID: 4732}
     - Class: 114
-      Script: {instanceID: 4920}
+      Script: {instanceID: 5104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -165,12 +156,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
-  - hash:
-      serializedVersion: 2
-      Hash: d1b036fbe5adcfe372c77a9d812c7e37
-    assemblyName: Unity.2D.IK.Runtime.dll
-    namespaceName: UnityEditor.U2D.IK
-    className: IKEditorManagerHelper
   - hash:
       serializedVersion: 2
       Hash: bcaee4c2a83047257b5f47d6ed264b75
