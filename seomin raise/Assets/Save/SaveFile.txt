@@ -1,9 +1,9 @@
 ﻿{
-    "money": 624,
+    "money": 1484,
     "money2": 0,
     "plusMoney": 2,
     "mPs": 1.5,
-    "diamond": 3,
+    "diamond": 7,
     "userJob": "",
     "userJobc": 0,
     "userJobs": 0,
